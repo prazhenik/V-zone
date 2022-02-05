@@ -1,0 +1,45 @@
+//====================================================================================================
+.header {
+	&__container {
+	}
+
+	&__content {
+		display: flex;
+		align-items: center;
+		column-gap: rem(60);
+		@include adaptiveValue("height", 120, 60);
+		@media (max-width: $mobile) {
+			column-gap: rem(30);
+		}
+	}
+
+	&__logo {
+		flex: 1 1 auto;
+	}
+
+	&__menu {
+	}
+}
+
+._popup-link {
+	flex: 0 0 auto; // не дает сжать кнопку
+	@media (max-width: $mobile) {
+		order: 2;
+	}
+	&__btn {
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+
+	&__icon {
+		display: none;
+		width: rem(30);
+		height: rem(30);
+		@media (max-width: $mobile) {
+			display: block;
+		}
+	}
+}
+
+//====================================================================================================

@@ -1,0 +1,98 @@
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	padding: 30px 10px;
+	transition: visibility 0.5s ease 0s;
+	visibility: hidden;
+	pointer-events: none;
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		min-height: 100%;
+		flex: 1 1 auto;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		justify-content: center;
+		position: relative;
+		visibility: hidden;
+		transform: scale(0);
+		transition: visibility 0.5s ease 0s scale 0.5s ease 0s;
+		width: 100%;
+		&.lock & {
+			visibility: visible;
+			transition: visibility 0.5s ease 0s scale 0.5s ease 0s;
+		}
+		&_callback {
+			max-width: rem(500);
+			background: #050e24;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+			border-radius: 10px;
+			border: 2px solid rgba(199, 199, 199, 0.7);
+			@include adaptiveValue("padding-top", 70, 50);
+			@include adaptiveValue("padding-bottom", 70, 20);
+			@include adaptiveValue("padding-left", 50, 10);
+			@include adaptiveValue("padding-right", 50, 10);
+			text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+			@media (max-width: $mobile) {
+				width: 85%;
+			}
+		}
+	}
+
+	&__close {
+		&_callback {
+			font-size: rem(24);
+			padding: 10px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			cursor: pointer;
+			color: white;
+			transition: scale 0.5s ease;
+			&:hover,
+			&:active {
+				color: white;
+				transform: scale(1.15);
+				transition: scale 0.5s ease;
+			}
+		}
+	}
+
+	&__title {
+		&_callback {
+		}
+	}
+
+	&__form {
+		//styles in scss/base/forms
+	}
+}
+
+.popup-show > body:after {
+	opacity: 1;
+	transition: opacity 0.3s ease 0s
+}
+
+.popup_show {
+	z-index: $overlayZindex + 1;
+	visibility: visible;
+	overflow: auto;
+	pointer-events: auto;
+	& .popup__content {
+		visibility: visible;
+		transform: scale(1);
+		transition: visibility 0.5s ease 0s scale 0.5s ease 0s;
+	}
+}

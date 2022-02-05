@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Главная</title>
+	<meta charset="UTF-8">
+	<meta name="title" content="">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<!-- OG Tags -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="J">
+	<meta property="og:site_name" content="">
+	<meta property="og:image:width" content="300">
+	<meta property="og:image:height" content="300">
+	<meta property="og:image" content="img/preview.jpg">
+
+	<!-- Styling -->
+	<meta name="msapplication-TileColor" content="#71a4f1">
+	<meta name="theme-color" content="#71a4f1"> <!-- theme color -->
+	<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220205210513">
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__content">
+					<a href="/home.html" class="header__logo"><img src="img/logo.svg" alt=""></a>
+					<div class="header__menu menu">
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item"><a href="" class="menu__link">Home</a></li>
+								<li class="menu__item"><a href="" class="menu__link">About Us</a></li>
+								<li class="menu__item"><a href="" class="menu__link">Service</a></li>
+								<li class="menu__item"><a href="" class="menu__link">Pricing</a></li>
+								<li class="menu__item"><a href="" class="menu__link">Blog</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div data-popup='#callback' class="_popup-link">
+						<button type="button" class="_popup-link__btn btn">Contact Us</button>
+						<img class="_popup-link__icon" src="img/icons/content/header-mail.svg" alt="">
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="page">
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<!---------------------------------simple popup-------------------------------->
+	<!-- 
+<div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+			</div>
+		</div>
+	</div>
+</div>
+-->
+
+	<!---------------------------------popup whis forms-------------------------------->
+	<div id="callback" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content popup__content_callback">
+				<button data-close type="button" class="popup__close popup__close_callback">Закрыть</button>
+				<h3 class="popup__title popup__title_callback">TITLE</h3>
+				<form action="sendmail.php" data-ajax method="POST" class="form popup__form form-callback">
+					<div class="form__item form-callback__item">
+						<input id="formName" autocomplete="off" type="text" name="form[name]" data-required="text" data-validate="text" data-error="Invalid character or data not entered" data-value="Your name*" placeholder="Your name*" class="form-callback__input input _text _req">
+					</div>
+
+					<div class="form__item form-callback__item">
+						<input id="formEmail" autocomplete="off" type="text" name="form[email]" data-required="email" data-validate="email" data-error="Incorrect e-mail address" placeholder="E-mail*" data-value="example@ex.com" class="form-callback__input input _email _req">
+					</div>
+
+					<div class="form__item form-callback__item">
+						<input id="formPhone" autocomplete="off" type="tel" name="form[phone]" data-required="phone" data-validate="phone" data-error="Enter your phone number without spaces, starting with '+'" placeholder="Your phone*" data-value="+_______________" class="form-callback__input input _phone _req">
+					</div>
+
+					<div class="form__item form-callback__item">
+						<textarea id="имя блока-textarea" autocomplete="off" name="form[textarea]" data-required data-error="Please write your message" placeholder="Message*" data-value="" class="form-callback__textarea _req"></textarea>
+					</div>
+
+					<button type="submit" class="form__submit form-callback__submit btn">SUBMIT</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!---------------------------------popup whis forms-------------------------------->
+
+	<script src="js/app.min.js?_v=20220205210513"></script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!---------------------------------simple popup-------------------------------->
+<!-- 
+<div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+			</div>
+		</div>
+	</div>
+</div>
+-->
+
+<!---------------------------------popup whis forms-------------------------------->
+<div id="callback" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content popup__content_callback">
+			<button data-close type="button" class="popup__close popup__close_callback">Закрыть</button>
+			<h3 class="popup__title popup__title_callback">TITLE</h3>
+			<form action="sendmail.php" data-ajax method="POST" class="form popup__form form-callback">
+				<div class="form__item form-callback__item">
+					<input id="formName" autocomplete="off" type="text" name="form[name]" data-required="text"
+						data-validate="text" data-error="Invalid character or data not entered" data-value="Your name*"
+						placeholder="Your name*" class="form-callback__input input _text _req">
+				</div>
+
+				<div class="form__item form-callback__item">
+					<input id="formEmail" autocomplete="off" type="text" name="form[email]" data-required="email"
+						data-validate="email" data-error="Incorrect e-mail address" placeholder="E-mail*"
+						data-value="example@ex.com" class="form-callback__input input _email _req">
+				</div>
+
+				<div class="form__item form-callback__item">
+					<input id="formPhone" autocomplete="off" type="tel" name="form[phone]" data-required="phone"
+						data-validate="phone" data-error="Enter your phone number without spaces, starting with '+'"
+						placeholder="Your phone*" data-value="+_______________"
+						class="form-callback__input input _phone _req">
+				</div>
+
+				<div class="form__item form-callback__item">
+					<textarea id="имя блока-textarea" autocomplete="off" name="form[textarea]" data-required
+						data-error="Please write your message" placeholder="Message*" data-value=""
+						class="form-callback__textarea _req"></textarea>
+				</div>
+
+				<button type="submit" class="form__submit form-callback__submit btn">SUBMIT</button>
+			</form>
+		</div>
+	</div>
+</div>
+<!---------------------------------popup whis forms-------------------------------->

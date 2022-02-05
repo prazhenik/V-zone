@@ -1,0 +1,23 @@
+._page-title {
+	display: inline-block;
+	font-weight: 900;
+	@include adaptiveValue("font-size", 60, 20);
+	@media (max-width: $mobile) {
+	}
+}
+
+.gallery__title {
+	@include adaptiveValue("font-size", 24, 12);
+	line-height: math.div(28, 24);
+	font-weight: 700;
+	@media (max-width: $mobile) {
+	}
+}
+
+.popup__title {
+	@include adaptiveValue("font-size", 40, 30);
+	line-height: math.div(40, 35);
+	margin: 0 0 rem(92) 0;
+	margin-bottom: rem(35);
+	font-weight: 700;
+}

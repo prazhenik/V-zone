@@ -1,0 +1,65 @@
+//<FORM>
+// Снипет (HTML): form
+
+.form {
+	display: grid;
+	row-gap: 20px;
+	&__item {
+		position: relative;
+	}
+	&__submit {
+		margin: rem(25) rem(0) rem(0) rem(0);
+	}
+	&__error {
+		position: absolute;
+		@include adaptiveValue("font-size", 10, 7);
+		@include adaptiveValue("bottom", -15, -10);
+		right: 0;
+		z-index: 2;
+		color: rgba(255, 255, 255, 1);
+	}
+}
+.form-callback {
+	&__input {
+	}
+
+	&__textarea {
+	}
+
+	&__submit {
+	}
+}
+
+//</FORM>
+
+// <BUTTONS>
+// Снипет (HTML): btn
+// @import "button";
+
+// <INPUTS>
+// Снипет (HTML): inp
+@import "input";
+
+// <CHECK>
+// Снипет (HTML): chk
+// @import "checkbox";
+
+// <RADIO>
+// Снипет (HTML): opt
+// @import "radio";
+
+// <SELECT>
+// Снипет (HTML): sel
+// @import "select";
+
+// <RATING>
+// Снипет (HTML): rating
+// @import "rating";
+
+// <QUANTITY>
+// Снипет (HTML): qa
+// @import "quantity";
+
+// <RANGE>
+// Снипет (HTML):
+// @import "range";

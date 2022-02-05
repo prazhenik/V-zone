@@ -1,0 +1,147 @@
+//---------------------------- ▼ ▼ ▼ BURGER ▼ ▼ ▼ -------------------------------
+
+//----------------------BURGER MENU ACTIVE-------------------------
+
+.menu {
+	@media (max-width: $mobile) {
+		order: 3;
+	}
+	&__icon {
+		display: none;
+		position: relative;
+		width: rem(30);
+		height: rem(20);
+		cursor: pointer;
+		transition: all 0.5s ease;
+		border-right: 2px solid;
+		border-left: 2px solid;
+		border-color: transparent;
+		@media (max-width: $mobile) {
+			display: block;
+			order: 3;
+			&._active {
+				border-right: 2px solid;
+				border-left: 2px solid;
+				border-color: $mainBorderColor;
+				transition: all 0.3s ease;
+				z-index: 2;
+				& span {
+					opacity: 0;
+				}
+				&::before {
+					top: 46%;
+					transform: rotate(-45deg);
+				}
+				&::after {
+					bottom: 46%;
+					transform: rotate(45deg);
+				}
+			}
+		}
+		& span,
+		&::before,
+		&::after {
+			content: "";
+			display: inline;
+			position: absolute;
+			height: rem(2);
+			transition: all 0.5s ease 0s;
+			background: white;
+			width: 100%;
+			left: 0;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		& span {
+			top: 50%;
+			transform: translate(0, -50%);
+		}
+	}
+
+	&__body {
+		display: flex;
+		@media (max-width: $mobile) {
+			position: fixed;
+			justify-content: center;
+			text-align: center;
+			top: 0%;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			color: $mainTextColor;
+			background: $mainBackgroundColor;
+			backdrop-filter: blur(20px);
+			transition: left 0.5s ease;
+			overflow: auto;
+			&._active {
+				left: 0;
+				z-index: 1;
+			}
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		@include adaptiveValue("column-gap", 60, 30, 1170, 767, 1);
+		row-gap: rem(10);
+		padding: rem(10) rem(0);
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			flex-wrap: nowrap;
+			padding: rem(0);
+		}
+	}
+
+	&__item {
+		padding: rem(5) rem(0);
+		line-height: math.div(65,65);
+		@media (max-width: $mobile) {
+			padding: rem(10);
+			&:first-child{
+				padding:  rem(50) rem(0) rem(0) rem(0);
+			}
+			&:last-child{
+				padding:  rem(0) rem(0) rem(50) rem(0);
+			}
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		@media (max-width: $mobile) {
+			@include adaptiveValue("font-size", 65, 40);
+			transition: all 0.5s ease;
+			position: relative;
+
+			&:hover,
+			&:active {
+				color: $mainTextColor;
+				transition: color 0.5s ease;
+			}
+			&:after {
+				content: "";
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				display: block;
+				@include adaptiveValue("height", 4, 2);
+				width: 0%;
+				background: $mainBackgroundColor;
+				transition: all 0.5s ease;
+			}
+			&:hover:after,
+			&:active:after {
+				width: 100%;
+				transition: width 0.5s ease;
+			}
+		}
+	}
+}
+
+//---------------------------- ▲ ▲ ▲ BURGER ▲ ▲ ▲ ------------------------------
