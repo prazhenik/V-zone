@@ -52,20 +52,20 @@
 	}
 
 	&__close {
+		padding: 10px;
+		position: absolute;
+		cursor: pointer;
 		&_callback {
-			font-size: rem(24);
-			padding: 10px;
-			position: absolute;
 			top: 0;
 			right: 0;
-			cursor: pointer;
-			color: white;
-			transition: scale 0.5s ease;
-			&:hover,
-			&:active {
-				color: white;
-				transform: scale(1.15);
-				transition: scale 0.5s ease;
+			background-color: transparent;
+		}
+		& svg {
+			transition: all 0.3s ease;
+			@media (any-hover: hover) {
+				&:hover {
+					transform: scale(1.15);
+				}
 			}
 		}
 	}
@@ -82,7 +82,7 @@
 
 .popup-show > body:after {
 	opacity: 1;
-	transition: opacity 0.3s ease 0s
+	transition: opacity 0.3s ease 0s;
 }
 
 .popup_show {
