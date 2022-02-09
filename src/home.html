@@ -1,16 +1,104 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('html/_head.htm',{
-	"title":"Главная"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
-			</main>
-			@@include('html/_footer.htm',{})
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		<div class="color-spots">
+			<div class="color-spots__item color-spots__item_top">
+				<div class="color-spots__wrapper color-spots__wrapper_top">
+					<div class="color-spots__spot color-spots__spot_top-navyBlue"></div>
+					<div class="color-spots__spot color-spots__spot_top-purple"></div>
+					<div class="color-spots__spot color-spots__spot_top-blue"></div>
+				</div>
+			</div>
+			<div class="color-spots__item color-spots__item_item2">
+				<div class="color-spots__wrapper">
+					<div class="color-spots__spot color-spots__spot_blue"></div>
+					<div class="color-spots__spot color-spots__spot_purple"></div>
+					<div class="color-spots__spot color-spots__spot_violet"></div>
+				</div>
+			</div>
+			<div class="color-spots__item color-spots__item_item3">
+				<div class="color-spots__wrapper">
+					<div class="color-spots__spot color-spots__spot_blue"></div>
+					<div class="color-spots__spot color-spots__spot_purple"></div>
+					<div class="color-spots__spot color-spots__spot_violet"></div>
+				</div>
+			</div>
+			<div class="color-spots__item color-spots__item_item4">
+				<div class="color-spots__wrapper">
+					<div class="color-spots__spot color-spots__spot_blue"></div>
+					<div class="color-spots__spot color-spots__spot_purple"></div>
+					<div class="color-spots__spot color-spots__spot_violet"></div>
+				</div>
+			</div>
+			<div class="color-spots__item color-spots__item_item5">
+				<div class="color-spots__wrapper">
+					<div class="color-spots__spot color-spots__spot_blue"></div>
+					<div class="color-spots__spot color-spots__spot_purple"></div>
+					<div class="color-spots__spot color-spots__spot_violet"></div>
+				</div>
+			</div>
+			<div class="color-spots__item color-spots__item_item6">
+				<div class="color-spots__wrapper">
+					<div class="color-spots__spot color-spots__spot_blue"></div>
+					<div class="color-spots__spot color-spots__spot_purple"></div>
+					<div class="color-spots__spot color-spots__spot_violet"></div>
+				</div>
+			</div>
+			<div class="color-spots__item color-spots__item_item7">
+				<div class="color-spots__wrapper">
+					<div class="color-spots__spot color-spots__spot_blue"></div>
+					<div class="color-spots__spot color-spots__spot_purple"></div>
+					<div class="color-spots__spot color-spots__spot_violet"></div>
+				</div>
+			</div>
+			<div class="color-spots__item color-spots__item_item8">
+				<div class="color-spots__wrapper">
+					<div class="color-spots__spot color-spots__spot_blue"></div>
+					<div class="color-spots__spot color-spots__spot_purple"></div>
+					<div class="color-spots__spot color-spots__spot_violet"></div>
+				</div>
+			</div>
+			<div class="color-spots__item color-spots__item_item9">
+				<div class="color-spots__wrapper">
+					<div class="color-spots__spot color-spots__spot_blue"></div>
+					<div class="color-spots__spot color-spots__spot_purple"></div>
+					<div class="color-spots__spot color-spots__spot_violet"></div>
+				</div>
+			</div>
 		</div>
-		@@include('html/_popup.htm',{})
-		@@include('html/_js.htm',{})
-	</body>
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<div class="page__container">
+				<div class="page__body">
+					<section class="main-section">
+						<div class="main-section__offer main-offer">
+							<h1 class="main-offer__title">Virtual Reality Business Solutions</h1>
+							<p class="main-offer__subtitle">We have over 15 year exprience in business consultting arena and artficial intelligence.
+							</p>
+							<div class="main-offer__buttons">
+								<button type="button" class="video-link">Watch video</button>
+								<div data-popup='#callback' class=" _popup-link">
+									<button type="button" class="_popup-link__btn btn">Join Us</button>
+								</div>
+							</div>
+
+						</div>
+						<div class="main-section__image">
+							<img src="@img/main-img.png" alt="">
+						</div>
+					</section>
+				</div>
+			</div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
 </html>

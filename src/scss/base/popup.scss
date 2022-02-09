@@ -55,6 +55,12 @@
 		padding: 10px;
 		position: absolute;
 		cursor: pointer;
+		outline: none;
+		margin: 0;
+		&:focus svg {
+			fill: red;
+		}
+		line-height: 1;
 		&_callback {
 			top: 0;
 			right: 0;
