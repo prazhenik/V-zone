@@ -260,12 +260,6 @@ body._preloader {
   overflow: hidden;
   touch-action: none;
 }
-.loaded body {
-  overflow: visible;
-}
-body.loaded.lock {
-  overflow: hidden;
-}
 body._loaded.lock {
   padding-right: 15.5px !important;
 }
@@ -658,7 +652,7 @@ input::placeholder {
   line-height: 1;
 }
 .popup__close:focus svg {
-  fill: red;
+  transform: scale(1.1);
 }
 .popup__close_callback {
   top: 0;

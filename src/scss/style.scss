@@ -143,7 +143,6 @@ $overlayZindex: 149; //индекс глобального оверлея
 // }
 
 body {
-
 	// universal overlay
 	&::after {
 		content: "";
@@ -168,12 +167,6 @@ body {
 		touch-action: none;
 	}
 	// Сайт загружен
-	.loaded & {
-		overflow: visible;
-	}
-	&.loaded.lock {
-		overflow: hidden;
-	}
 	&._loaded.lock {
 		padding-right: calc($scrollbarWidth - 0.5px) !important; // общая коррекция контента на скролл при модалке/меню
 		& header,
