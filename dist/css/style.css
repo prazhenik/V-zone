@@ -1020,7 +1020,7 @@ input::placeholder {
   flex: 0 0 auto;
 }
 @media (max-width: 47.99875em) {
-  ._popup-link__btn {
+  ._popup-link__btn_header {
     display: none;
   }
 }

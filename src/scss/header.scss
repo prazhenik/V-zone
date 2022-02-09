@@ -24,7 +24,7 @@
 
 ._popup-link {
 	flex: 0 0 auto; // не дает сжать кнопку
-	&__btn {
+	&__btn_header {
 		@media (max-width: $mobile) {
 			display: none;
 		}
