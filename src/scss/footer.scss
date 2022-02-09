@@ -44,7 +44,7 @@
 		display: grid;
 		width: 100%;
 		grid-template-columns: repeat(auto-fit, minmax(rem(170), 1fr));
-		column-gap: rem(60);
+		column-gap: rem(50);
 		row-gap: rem(40);
 		font-size: rem(18);
 		@media (max-width: $mobile) {

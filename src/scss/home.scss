@@ -1,20 +1,34 @@
 .main-section {
 	display: flex;
+	column-gap: 20px;
+	row-gap: 30px;
 	justify-content: space-between;
 	align-items: center;
-	padding: rem(70) rem(0);
+	@include adaptiveValue("padding-top", 70, 20);
+	@include adaptiveValue("padding-bottom", 70, 20);
+	@media (max-width: $mobile) {
+		justify-content: center;
+	}
+	@media (max-width: $mobileSmall) {
+		flex-wrap: wrap-reverse;
+	}
 	// .main__offer
 	&__offer {
+		flex: 0 1 50%;
 		max-width: rem(550);
-		max-height: rem(350);
+		@media (max-width: $mobileSmall) {
+			flex: 0 1 100%;
+		}
 	}
 	// .main__image
 	&__image {
 		position: relative;
-		flex: 0 0 520px;
-		height: 100%;
-		//max-height: rem(570);
+		flex: 1 0 45%;
+		@include adaptiveValue("height", 570, 300, 1220, 576, 1);
 		overflow: hidden;
+		@media (max-width: $mobileSmall) {
+			flex: 1 0 auto;
+		}
 		& img {
 			position: absolute;
 			top: 41%;
@@ -22,30 +36,63 @@
 			transform: translate(-50%, -50%);
 			width: 120%;
 			height: 120%;
-			object-fit: cover;
-			transition: all ease 0.5s;
+			object-fit: contain;
 		}
 	}
 }
 .main-offer {
 	// .main-offer__title
 	&__title {
+		margin: rem(0) auto rem(30);
 	}
 	// .main-offer__subtitle
 	&__subtitle {
+		margin: rem(0) rem(0) rem(30) rem(0);
 	}
 	// .main-offer__buttons
 	&__buttons {
+		display: flex;
+		column-gap: rem(35);
+		row-gap: rem(10);
+		@media (max-width: $mobileSmall) {
+			flex-direction: column-reverse;
+		}
 	}
 }
 .video-link {
-}
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@include adaptiveValue("min-height", 50, 40);
+	@media (max-width: $mobileSmall) {
+		width: 80%;
+		margin: 0 auto;
+	}
+	&__logo{
+		&:before {
+			padding-right: rem(20);
+			font-size: rem(25);
+		}
+	}
+	&__btn{
 
-._popup-link {
-	// ._popup-link__btn
-	&__btn {
 	}
 }
 
-
-
+._popup-link {
+	&_offer {
+		display: inline-block;
+		text-align: center;
+		@media (max-width: $mobileSmall) {
+		}
+	}
+	// ._popup-link__btn
+	&__btn {
+		&_offer {
+			display: inline-block;
+			@media (max-width: $mobileSmall) {
+				width: 80%;
+			}
+		}
+	}
+}

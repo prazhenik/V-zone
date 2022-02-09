@@ -24,9 +24,6 @@
 
 ._popup-link {
 	flex: 0 0 auto; // не дает сжать кнопку
-	@media (max-width: $mobile) {
-		order: 2;
-	}
 	&__btn {
 		@media (max-width: $mobile) {
 			display: none;
@@ -40,6 +37,11 @@
 		@media (max-width: $mobile) {
 			display: block;
 		}
+	}
+}
+._popup-link_header {
+	@media (max-width: $mobile) {
+		order: 2;
 	}
 }
 
