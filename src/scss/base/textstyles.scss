@@ -28,13 +28,19 @@
 	@include adaptiveValue("font-size", 42, 22);
 	line-height: math.div(55, 42);
 	font-weight: 700;
+	&:not(:last-child) {
+		@include adaptiveValue("margin-bottom", 30, 20);
+	}
 	@media (max-width: $mobile) {
 	}
 }
 
 ._section-subtitle {
-	@include adaptiveValue("font-size", 16, 14);
+	@include adaptiveValue("font-size", 16, 12);
 	line-height: math.div(26, 16);
+	&:not(:last-child) {
+		@include adaptiveValue("margin-bottom", 50, 30);
+	}
 	@media (max-width: $mobile) {
 	}
 }

@@ -19,14 +19,13 @@
 			display: flex;
 			row-gap: rem(50);
 			@include adaptiveValue("column-gap", 60, 25, 768, 576, 1);
-
+			@include adaptiveValue("padding-top", 30, 20);
+			@include adaptiveValue("padding-bottom", 30, 20);
 			@media (max-width: $mobileSmall) {
 				column-gap: rem(60);
 			}
 			@media (max-width: 420px) {
 				flex-wrap: wrap;
-				//justify-content: center;
-				//text-align: center;
 			}
 		}
 
