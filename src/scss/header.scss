@@ -42,7 +42,6 @@
 ._popup-link {
 	flex: 0 0 auto; // не дает сжать кнопку
 	&__btn_header {
-		background: linear-gradient(90.35deg, #2563eb 0.36%, #d946ef 201.02%);
 		@media (max-width: $mobile) {
 			display: none;
 		}

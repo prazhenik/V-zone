@@ -23,6 +23,7 @@
 	width: auto;
 	overflow: hidden;
 	min-height: rem(50);
+	border-radius: 5px;
 	//@include adaptiveValue("min-height", 50, 40);
 	@include adaptiveValue("padding-left", 25, 15);
 	@include adaptiveValue("padding-right", 25, 15);

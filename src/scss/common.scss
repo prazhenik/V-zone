@@ -5,6 +5,10 @@ section {
 	@include adaptiveValue("padding-bottom", 70, 30);
 }
 
+.btn{
+	background: linear-gradient(90.35deg, #2563eb 0.36%, #d946ef 201.02%);
+}
+
 .color-spots {
 	position: fixed;
 	top: 0;

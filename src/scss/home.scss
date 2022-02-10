@@ -42,11 +42,15 @@
 .main-offer {
 	// .main-offer__title
 	&__title {
-		margin: rem(0) auto rem(30);
+		&:not(:last-child) {
+			margin: rem(0) auto rem(30);
+		}
 	}
 	// .main-offer__subtitle
 	&__subtitle {
-		margin: rem(0) rem(0) rem(30) rem(0);
+		&:not(:last-child) {
+			margin: rem(0) rem(0) rem(30) rem(0);
+		}
 	}
 	// .main-offer__buttons
 	&__buttons {
@@ -63,6 +67,7 @@
 	align-items: center;
 	justify-content: center;
 	min-height: rem(50);
+	cursor: pointer;
 	@include adaptiveValue("min-height", 50, 50);
 	@media (max-width: $mobileSmall) {
 		width: 90%;
@@ -89,7 +94,6 @@
 	&__btn {
 		&_offer {
 			display: inline-block;
-			background: linear-gradient(90.35deg, #2563eb 0.36%, #d946ef 201.02%);
 			@media (max-width: $mobileSmall) {
 				width: 90%;
 			}
@@ -130,7 +134,6 @@
 	}
 	// .service__card
 	&__card {
-	
 	}
 }
 
@@ -174,6 +177,91 @@
 		padding: rem(10);
 		& span {
 			margin: rem(1) rem(0) rem(0) rem(5);
+		}
+	}
+}
+
+//-------articles-------
+
+.articles {
+	display: flex;
+	@include adaptiveValue("row-gap", 140, 60);
+	flex-wrap: wrap;
+	// .articles__article
+	&__article {
+	}
+}
+.article {
+	display: flex;
+	column-gap: 20px;
+	row-gap: 30px;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	@media (max-width: $mobile) {
+		justify-content: center;
+		flex-wrap: wrap;
+		text-align: center;
+	}
+	// .article_importance
+	&_importance {
+	}
+	// .article_knowleges
+	&_knowleges {
+		flex-direction: row-reverse;
+	}
+	// .article__image
+	&__image {
+		position: relative;
+		flex: 1 0 40%;
+		max-width: rem(555);
+		@include adaptiveValue("height", 480, 300, 1220, 576, 1);
+		overflow: hidden;
+		@media (max-width: $mobile) {
+			flex: 1 0 100%;
+		}
+		& img {
+			position: absolute;
+			top: 47%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 110%;
+			height: 110%;
+			object-fit: contain;
+		}
+	}
+	// .article__offer
+	&__offer {
+		flex: 0 1 50%;
+		max-width: rem(550);
+		@media (max-width: $mobile) {
+			flex: 0 1 100%;
+		}
+	}
+}
+.article-offer {
+	// .article-offer__title
+	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 30, 20);
+		}
+		@media (max-width: $mobile) {
+			//max-width: rem(500);
+		}
+
+	}
+	// .article-offer__subtitle
+	&__subtitle {
+		text-align: justify;
+		@include adaptiveValue("font-size", 16, 12);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 30);
+		}
+	}
+	// .article-offer__btn
+	&__btn {
+		@media (max-width: $mobile) {
+			width: 90%;
 		}
 	}
 }
