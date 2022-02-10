@@ -16,7 +16,7 @@
 
 ._page-subtitle {
 	font-weight: 500;
-	@include adaptiveValue("font-size", 15, 11, 1220, 578);
+	@include adaptiveValue("font-size", 15, 11, 1220, 578, 1);
 	line-height: math.div(30, 15);
 	@media (max-width: $mobileSmall) {
 		@include adaptiveValue("font-size", 15, 11, 578, 280, 1);
@@ -24,10 +24,17 @@
 	}
 }
 
-.gallery__title {
-	@include adaptiveValue("font-size", 24, 12);
-	line-height: math.div(28, 24);
+._section-title {
+	@include adaptiveValue("font-size", 42, 22);
+	line-height: math.div(55, 42);
 	font-weight: 700;
+	@media (max-width: $mobile) {
+	}
+}
+
+._section-subtitle {
+	@include adaptiveValue("font-size", 16, 14);
+	line-height: math.div(26, 16);
 	@media (max-width: $mobile) {
 	}
 }

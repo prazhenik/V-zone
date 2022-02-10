@@ -1,5 +1,10 @@
 // Заголовки, общие БЄМ блоки и проче...
 
+section {
+	@include adaptiveValue("padding-top", 70, 30);
+	@include adaptiveValue("padding-bottom", 70, 30);
+}
+
 .color-spots {
 	position: fixed;
 	top: 0;

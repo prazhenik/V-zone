@@ -22,8 +22,8 @@
 	justify-content: center;
 	width: auto;
 	overflow: hidden;
-	background: linear-gradient(90.35deg, #2563eb 0.36%, #d946ef 201.02%);
-	@include adaptiveValue("min-height", 50, 40);
+	min-height: rem(50);
+	//@include adaptiveValue("min-height", 50, 40);
 	@include adaptiveValue("padding-left", 25, 15);
 	@include adaptiveValue("padding-right", 25, 15);
 	//transition: all 0.3s ease;
