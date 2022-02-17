@@ -1,3 +1,5 @@
+//актуализирован 17/02/22 13.56
+
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
 
@@ -464,7 +466,7 @@ export function menuClose() {
 }
 
 document.addEventListener('keydown', function (e) {
-	if (e.code === 'Escape') {
+	if (e.code === 'Escape' && document.documentElement.classList.contains('menu-open')) {
 		menuClose()
 	}
 });

@@ -162,20 +162,20 @@ body {
 	&._preloader {
 		overflow: hidden;
 	}
-	.lock & {
+	.lock.loaded & {
 		overflow: hidden;
 		touch-action: none;
 	}
 	// Сайт загружен
-	&._loaded.lock {
-		padding-right: calc($scrollbarWidth - 0.5px) !important; // общая коррекция контента на скролл при модалке/меню
-		& header,
-		.__popup-link {
-			padding-right: calc(
-				$scrollbarWidth - 0.5px
-			) !important; // коррекция хедера на скролл при модалке/меню если header position fixed ил relative
-		}
-	}
+	// &.loaded.lock {
+		//padding-right: calc($scrollbarWidth - 0.5px) !important; // общая коррекция контента на скролл при модалке/меню
+	// 	& header,
+	// 	.__popup-link {
+	// 		padding-right: calc(
+	// 			$scrollbarWidth - 0.5px
+	// 		) !important; // коррекция хедера на скролл при модалке/меню если header position fixed ил relative
+	// 	}
+	// }
 }
 // Оболочка =======================================================================
 .wrapper {

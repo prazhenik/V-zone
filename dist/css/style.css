@@ -138,7 +138,6 @@ body {
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 0.02em;
-  padding: 0 !important;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -256,16 +255,9 @@ body::after {
 body._preloader {
   overflow: hidden;
 }
-.lock body {
+.lock.loaded body {
   overflow: hidden;
   touch-action: none;
-}
-body._loaded.lock {
-  padding-right: 15.5px !important;
-}
-body._loaded.lock header,
-body._loaded.lock .__popup-link {
-  padding-right: 15.5px !important;
 }
 
 .wrapper {

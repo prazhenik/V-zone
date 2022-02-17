@@ -269,7 +269,7 @@
         iconMenu.classList.remove("_active");
     }
     document.addEventListener("keydown", (function(e) {
-        if ("Escape" === e.code) menuClose();
+        if ("Escape" === e.code && document.documentElement.classList.contains("menu-open")) menuClose();
     }));
     function FLS(message) {
         setTimeout((() => {
