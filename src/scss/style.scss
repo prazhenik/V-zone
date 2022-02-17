@@ -24,13 +24,13 @@ $letterSpacing: 0.02;
 // цвета шрифтов
 $mainTextColor: rgba(255, 255, 255, 1); // Цвет шрифта по умолчанию
 $textColor2: rgba(255, 255, 255, .8); //footer
-//$textColor3: rgba(255, 255, 255, 1); //футер меню
+$textColor3: rgb(240, 111, 245);//ссылки хедер меню
 // $textColor4: rgba(220, 220, 220, 0.6);
 // $textColor5: rgba(0, 160, 255, 1);
 //$textColor5: ;
 
 // цвета фонов
-$mainBackgroundColor: rgba(0, 0, 0, 1); //Цвет фона по умолчанию
+$mainBackgroundColor: rgba(17, 24, 39, 1); //Цвет фона по умолчанию
 // $backgroundColor2: rgba(0, 0, 0, 0.7); // overlays _lock
 // $backgroundColor3: rgba(0, 0, 0, 0.3);
 // $backgroundColor4: rgba(220, 220, 220, 1);
@@ -184,7 +184,7 @@ body {
 	flex-direction: column;
 	width: 100%;
 	height: 100%;
-	background: #111827;
+	background: rgba(17, 24, 39, 1);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	position: relative;
 

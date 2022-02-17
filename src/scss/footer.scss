@@ -67,14 +67,16 @@
 
 	&__item:not(:last-child, :first-child) {
 		margin: rem(0) rem(0) rem(10) rem(0);
-		@media (any-hover: hover) {
-			&:hover {
-				color: $mainTextColor;
-			}
-		}
 	}
 
 	&__link {
+		transition: color .3s ;
+		@media (any-hover: hover){
+			&:hover{
+				color: $textColor3;
+				transition: color .3s ;
+			}
+		}
 	}
 }
 .socials-footer {
@@ -85,8 +87,12 @@
 		padding: rem(20) rem(0) rem(0) rem(0);
 	}
 	&__item {
-		position: relative;
 
+	}
+
+	&__link {
+		position: relative;
+		z-index: 1;
 		&::after {
 			content: "";
 			display: inline-block;
@@ -99,9 +105,13 @@
 			border: 1px solid $mainBorderColor;
 			border-radius: 50%;
 		}
-	}
-
-	&__link {
+		transition: color .3s ;
+		@media (any-hover: hover){
+			&:hover{
+				color: $textColor3;
+				transition: color .3s ;
+			}
+		}
 	}
 }
 
@@ -161,12 +171,6 @@
 		&:not(:last-child) {
 			margin: rem(0) rem(0) rem(15) rem(0);
 		}
-
-		@media (any-hover: hover) {
-			&:hover {
-				color: $mainTextColor;
-			}
-		}
 	}
 
 	&__item:not(:last-child) {
@@ -174,6 +178,13 @@
 	}
 
 	&__link {
+		transition: color .3s ;
+		@media (any-hover: hover){
+			&:hover{
+				color: $textColor3;
+				transition: color .3s ;
+			}
+		}
 	}
 }
 .policy {

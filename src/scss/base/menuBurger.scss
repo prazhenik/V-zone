@@ -69,11 +69,11 @@
 			color: $mainTextColor;
 			background: $mainBackgroundColor;
 			backdrop-filter: blur(20px);
-			transition: left 0.5s ease;
+			transition: all 0.5s ease;
 			overflow: auto;
 			z-index: 99;
 			&._active {
-				left: 0;
+				transform: translateX(100%);
 			}
 		}
 	}
@@ -108,32 +108,17 @@
 
 	&__link {
 		display: inline-block;
+		transition: color .3s ;
+		@media (any-hover: hover){
+			&:hover{
+				color: $textColor3;
+				transition: color .3s ;
+			}
+		}
 		@media (max-width: $mobile) {
 			@include adaptiveValue("font-size", 65, 40);
 			transition: all 0.5s ease;
 			position: relative;
-
-			&:hover,
-			&:active {
-				color: $mainTextColor;
-				transition: color 0.5s ease;
-			}
-			&:after {
-				content: "";
-				position: absolute;
-				left: 0;
-				bottom: 0;
-				display: block;
-				@include adaptiveValue("height", 4, 2);
-				width: 0%;
-				background: $mainBackgroundColor;
-				transition: all 0.5s ease;
-			}
-			&:hover:after,
-			&:active:after {
-				width: 100%;
-				transition: width 0.5s ease;
-			}
 		}
 	}
 }

@@ -28,9 +28,25 @@
 	@include adaptiveValue("padding-left", 25, 15);
 	@include adaptiveValue("padding-right", 25, 15);
 	//transition: all 0.3s ease;
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: -100%;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(240, 10, 248, 1);
+		border-radius: 5px;
+		transition: all 0.5s;
+	}
+	& span {
+		position: relative;
+		z-index: 1;
+	}
 	@media (any-hover: hover) {
-		&:hover {
+		&:hover::before {
+			transform: translateY(-100%);
+			
 		}
 	}
-
 }

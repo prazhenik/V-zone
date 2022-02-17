@@ -22,7 +22,7 @@
 	<meta name="theme-color" content="#71a4f1"> <!-- theme color -->
 	<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220217141928">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220217202651">
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="robots" content="noindex, nofollow">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -104,16 +104,16 @@
 						<button type="button" class="menu__icon icon-menu"><span></span></button>
 						<nav class="menu__body">
 							<ul class="menu__list">
-								<li class="menu__item"><a href="" class="menu__link">Home</a></li>
-								<li class="menu__item"><a href="" class="menu__link">About Us</a></li>
-								<li class="menu__item"><a href="" class="menu__link">Service</a></li>
-								<li class="menu__item"><a href="" class="menu__link">Pricing</a></li>
-								<li class="menu__item"><a href="" class="menu__link">Blog</a></li>
+								<li class="menu__item"><a href="#" data-goto=".page" data-goto-header class="menu__link">Home</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">About Us</a></li>
+								<li class="menu__item"><a href="#" data-goto=".service" data-goto-header class="menu__link">Service</a></li>
+								<li class="menu__item"><a href="#" data-goto=".team" data-goto-header class="menu__link">Team</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Blog</a></li>
 							</ul>
 						</nav>
 					</div>
 					<div data-popup='#callback' class="_popup-link _popup-link_header">
-						<button type="button" class="_popup-link__btn _popup-link__btn_header btn">Contact Us</button>
+						<button type="button" class="_popup-link__btn _popup-link__btn_header btn"><span>Contact Us</span></button>
 						<img class="_popup-link__icon" src="img/icons/content/header-mail.svg" alt="">
 					</div>
 				</div>
@@ -131,19 +131,16 @@
 							</p>
 							<div class="main-offer__buttons">
 								<div data-popup='#callback' class=" _popup-link _popup-link_offer">
-									<button type="button" class="_popup-link__btn _popup-link__btn_offer btn">Join Us</button>
+									<button type="button" class="_popup-link__btn _popup-link__btn_offer btn"><span>Join Us</span></button>
 								</div>
-								<div class="video-link">
-									<div class="video-link__logo _icon-main-play"></div>
-									<button type="button" class="video-link__btn">Watch video</button>
-								</div>
+								<button type="button" data-popup="#video" data-popup-youtube="5_bVkbG1ZCo" class="video-link__btn _icon-main-play"><span>Watch video</span></button>
 							</div>
 						</div>
 						<div class="main-section__image">
 							<picture><source srcset="img/main-img.webp" type="image/webp"><img src="img/main-img.png" alt=""></picture>
 						</div>
 					</section>
-					<section class="service">
+					<section id="service" class="service">
 						<div class="service__header">
 							<h2 class="service__title _section-title">Our Service</h2>
 							<p class="service__subtitle _section-subtitle">We turn information into actionable insights We work
@@ -221,7 +218,7 @@
 									customers say they're more loyal to businesses that offer top-notch service, according to our
 									Trends Report.
 								</p>
-								<button type="button" class="article-offer__btn btn">Read more</button>
+								<button type="button" class="article-offer__btn btn"><span>Read more</span></button>
 							</div>
 						</article>
 						<article class="articles__article article article_knowleges">
@@ -238,7 +235,7 @@
 									will spend more to buy from a company that is empathetic and understanding, according to our
 									Trends Report.
 								</p>
-								<button type="button" class="article-offer__btn btn">Read more</button>
+								<button type="button" class="article-offer__btn btn"><span>Read more</span></button>
 							</div>
 						</article>
 					</section>
@@ -262,24 +259,28 @@
 										<div class="team-card__socials socials-card">
 											<ul class="socials-card__list">
 												<li class="socials-card__item">
-													<a href="" class="socials-card__link">
+													<!--noindex--><a href="https://skype.com" target="_blank" rel="nofollow noopener noreferrer" class="socials-card__link">
 														<picture><source srcset="img/icons/content/skype.webp" type="image/webp"><img src="img/icons/content/skype.png" alt="" class="socials-card__img"></picture>
 													</a>
+													<!--/noindex-->
 												</li>
 												<li class="socials-card__item">
-													<a href="" class="socials-card__link">
+													<!--noindex--><a href="https://linkedin.com" target="_blank" rel="nofollow noopener noreferrer" class="socials-card__link">
 														<picture><source srcset="img/icons/content/linkedin.webp" type="image/webp"><img src="img/icons/content/linkedin.png" alt="" class="socials-card__img"></picture>
 													</a>
+													<!--/noindex-->
 												</li>
 												<li class="socials-card__item">
-													<a href="" class="socials-card__link">
+													<!--noindex--><a href="https://twitter.com" target="_blank" rel="nofollow noopener noreferrer" class="socials-card__link">
 														<picture><source srcset="img/icons/content/twitter.webp" type="image/webp"><img src="img/icons/content/twitter.png" alt="" class="socials-card__img"></picture>
 													</a>
+													<!--/noindex-->
 												</li>
 												<li class="socials-card__item">
-													<a href="" class="socials-card__link">
+													<!--noindex--><a href="https://facebook.com" target="_blank" rel="nofollow noopener noreferrer" class="socials-card__link">
 														<picture><source srcset="img/icons/content/facebook.webp" type="image/webp"><img src="img/icons/content/facebook.png" alt="" class="socials-card__img"></picture>
 													</a>
+													<!--/noindex-->
 												</li>
 											</ul>
 										</div>
@@ -295,24 +296,28 @@
 										<div class="team-card__socials socials-card">
 											<ul class="socials-card__list">
 												<li class="socials-card__item">
-													<a href="" class="socials-card__link">
+													<!--noindex--><a href="https://skype.com" target="_blank" rel="nofollow noopener noreferrer" class="socials-card__link">
 														<picture><source srcset="img/icons/content/skype.webp" type="image/webp"><img src="img/icons/content/skype.png" alt="" class="socials-card__img"></picture>
 													</a>
+													<!--/noindex-->
 												</li>
 												<li class="socials-card__item">
-													<a href="" class="socials-card__link">
+													<!--noindex--><a href="https://linkedin.com" target="_blank" rel="nofollow noopener noreferrer" class="socials-card__link">
 														<picture><source srcset="img/icons/content/linkedin.webp" type="image/webp"><img src="img/icons/content/linkedin.png" alt="" class="socials-card__img"></picture>
 													</a>
+													<!--/noindex-->
 												</li>
 												<li class="socials-card__item">
-													<a href="" class="socials-card__link">
+													<!--noindex--><a href="https://twitter.com" target="_blank" rel="nofollow noopener noreferrer" class="socials-card__link">
 														<picture><source srcset="img/icons/content/twitter.webp" type="image/webp"><img src="img/icons/content/twitter.png" alt="" class="socials-card__img"></picture>
 													</a>
+													<!--/noindex-->
 												</li>
 												<li class="socials-card__item">
-													<a href="" class="socials-card__link">
+													<!--noindex--><a href="https://facebook.com" target="_blank" rel="nofollow noopener noreferrer" class="socials-card__link">
 														<picture><source srcset="img/icons/content/facebook.webp" type="image/webp"><img src="img/icons/content/facebook.png" alt="" class="socials-card__img"></picture>
 													</a>
+													<!--/noindex-->
 												</li>
 											</ul>
 										</div>
@@ -328,24 +333,28 @@
 										<div class="team-card__socials socials-card">
 											<ul class="socials-card__list">
 												<li class="socials-card__item">
-													<a href="" class="socials-card__link">
+													<!--noindex--><a href="https://skype.com" target="_blank" rel="nofollow noopener noreferrer" class="socials-card__link">
 														<picture><source srcset="img/icons/content/skype.webp" type="image/webp"><img src="img/icons/content/skype.png" alt="" class="socials-card__img"></picture>
 													</a>
+													<!--/noindex-->
 												</li>
 												<li class="socials-card__item">
-													<a href="" class="socials-card__link">
+													<!--noindex--><a href="https://linkedin.com" target="_blank" rel="nofollow noopener noreferrer" class="socials-card__link">
 														<picture><source srcset="img/icons/content/linkedin.webp" type="image/webp"><img src="img/icons/content/linkedin.png" alt="" class="socials-card__img"></picture>
 													</a>
+													<!--/noindex-->
 												</li>
 												<li class="socials-card__item">
-													<a href="" class="socials-card__link">
+													<!--noindex--><a href="https://twitter.com" target="_blank" rel="nofollow noopener noreferrer" class="socials-card__link">
 														<picture><source srcset="img/icons/content/twitter.webp" type="image/webp"><img src="img/icons/content/twitter.png" alt="" class="socials-card__img"></picture>
 													</a>
+													<!--/noindex-->
 												</li>
 												<li class="socials-card__item">
-													<a href="" class="socials-card__link">
+													<!--noindex--><a href="https://facebook.com" target="_blank" rel="nofollow noopener noreferrer" class="socials-card__link">
 														<picture><source srcset="img/icons/content/facebook.webp" type="image/webp"><img src="img/icons/content/facebook.png" alt="" class="socials-card__img"></picture>
 													</a>
+													<!--/noindex-->
 												</li>
 											</ul>
 										</div>
@@ -361,24 +370,28 @@
 										<div class="team-card__socials socials-card">
 											<ul class="socials-card__list">
 												<li class="socials-card__item">
-													<a href="" class="socials-card__link">
+													<!--noindex--><a href="https://skype.com" target="_blank" rel="nofollow noopener noreferrer" class="socials-card__link">
 														<picture><source srcset="img/icons/content/skype.webp" type="image/webp"><img src="img/icons/content/skype.png" alt="" class="socials-card__img"></picture>
 													</a>
+													<!--/noindex-->
 												</li>
 												<li class="socials-card__item">
-													<a href="" class="socials-card__link">
+													<!--noindex--><a href="https://linkedin.com" target="_blank" rel="nofollow noopener noreferrer" class="socials-card__link">
 														<picture><source srcset="img/icons/content/linkedin.webp" type="image/webp"><img src="img/icons/content/linkedin.png" alt="" class="socials-card__img"></picture>
 													</a>
+													<!--/noindex-->
 												</li>
 												<li class="socials-card__item">
-													<a href="" class="socials-card__link">
+													<!--noindex--><a href="https://twitter.com" target="_blank" rel="nofollow noopener noreferrer" class="socials-card__link">
 														<picture><source srcset="img/icons/content/twitter.webp" type="image/webp"><img src="img/icons/content/twitter.png" alt="" class="socials-card__img"></picture>
 													</a>
+													<!--/noindex-->
 												</li>
 												<li class="socials-card__item">
-													<a href="" class="socials-card__link">
+													<!--noindex--><a href="https://facebook.com" target="_blank" rel="nofollow noopener noreferrer" class="socials-card__link">
 														<picture><source srcset="img/icons/content/facebook.webp" type="image/webp"><img src="img/icons/content/facebook.png" alt="" class="socials-card__img"></picture>
 													</a>
+													<!--/noindex-->
 												</li>
 											</ul>
 										</div>
@@ -391,13 +404,14 @@
 					<section class="subscribe">
 						<div class="subscribe__body">
 							<h3 class="subscribe__title _section-title">Subscribe to get the Latest News</h3>
-							<p class="subscribe__subtitle _section-subtitle">We recommended you to subscribe to our newspaper,drop your email below to get daily update about us.</p>
+							<p class="subscribe__subtitle _section-subtitle">We recommended you to subscribe to our
+								newspaper,drop your email below to get daily update about us.</p>
 							<form action="sendmail.php" data-ajax="true" method="POST" class="form subscribe__form form-subscribe">
 								<div class="form__item form-callback__item">
 									<input id="formEmail" autocomplete="off" type="text" name="form[email]" data-required="email" data-validate="email" data-error="Incorrect e-mail address" placeholder="Enter your email addres" data-value="example@ex.com" class="form-subscribe__input input _email _req">
 								</div>
 								<button type="submit" class="form__submit form-subscribe__submit btn">
-									<span></span>
+									<span class="form-subscribe__icon"></span>
 									<p>Subscribe</p>
 								</button>
 							</form>
@@ -427,16 +441,20 @@
 								<li class="footer-contacts__item">
 									<ul class="socials-footer">
 										<li class="socials-footer__item">
-											<a href="" class="socials-footer__link _icon-facebook"></a>
+											<!--noindex--><a href="https://facebook.com" target="_blank" rel="nofollow noopener noreferrer" class="socials-footer__link _icon-facebook"></a>
+											<!--/noindex-->
 										</li>
 										<li class="socials-footer__item">
-											<a href="" class="socials-footer__link _icon-twitter"></a>
+											<!--noindex--><a href="https://twitter.com" target="_blank" rel="nofollow noopener noreferrer" class="socials-footer__link _icon-twitter"></a>
+											<!--/noindex-->
 										</li>
 										<li class="socials-footer__item">
-											<a href="" class="socials-footer__link _icon-instagram"></a>
+											<!--noindex--><a href="https://instagram.com" target="_blank" rel="nofollow noopener noreferrer" class="socials-footer__link _icon-instagram"></a>
+											<!--/noindex-->
 										</li>
 										<li class="socials-footer__item">
-											<a href="" class="socials-footer__link _icon-pinterset"></a>
+											<!--noindex--><a href="https://pinterest.com" target="_blank" rel="nofollow noopener noreferrer" class="socials-footer__link _icon-pinterset"></a>
+											<!--/noindex-->
 										</li>
 									</ul>
 								</li>
@@ -576,7 +594,7 @@
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L13.7071 12.2929C14.0976 12.6834 14.0976 13.3166 13.7071 13.7071C13.3166 14.0976 12.6834 14.0976 12.2929 13.7071L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="black" />
 					</svg>
 				</button>
-				<h3 class="popup__title popup__title_callback">TITLE</h3>
+				<h3 class="popup__title popup__title_callback">ASK YOUR QUESTIONS</h3>
 				<form action="sendmail.php" data-ajax method="POST" class="form popup__form form-callback">
 					<div class="form__item form-callback__item">
 						<input id="formName" autocomplete="off" type="text" name="form[name]" data-required="text" data-validate="text" data-error="Invalid character or data not entered" data-value="Your name*" placeholder="Your name*" class="form-callback__input input _text _req">
@@ -594,14 +612,29 @@
 						<textarea id="имя блока-textarea" autocomplete="off" name="form[textarea]" data-required data-error="Please write your message" placeholder="Message*" data-value="" class="form-callback__textarea _req"></textarea>
 					</div>
 
-					<button type="submit" class="form__submit form-callback__submit btn">SUBMIT</button>
+					<button type="submit" class="form__submit form-callback__submit btn"><span>SUBMIT</span></button>
 				</form>
 			</div>
 		</div>
 	</div>
 	<!---------------------------------popup whis forms-------------------------------->
+	<!--------------------------------- video popup-------------------------------->
+	<div id="video" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content popup__content_video">
+				<button data-close type="button" class="popup__close popup__close_video">
+					<svg width="20" height="20" viewBox="0 0 14 14" fill="white">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L1.70711 13.7071C1.31658 14.0976 0.683417 14.0976 0.292893 13.7071C-0.0976311 13.3166 -0.0976311 12.6834 0.292893 12.2929L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893Z" fill="black" />
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L13.7071 12.2929C14.0976 12.6834 14.0976 13.3166 13.7071 13.7071C13.3166 14.0976 12.6834 14.0976 12.2929 13.7071L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="black" />
+					</svg>
+				</button>
+				<div data-youtube-place class="popup__text"></div>
+			</div>
+		</div>
+	</div>
+	<!--------------------------------- video popup-------------------------------->
 
-	<script src="js/app.min.js?_v=20220217141928"></script>
+	<script src="js/app.min.js?_v=20220217202651"></script>
 </body>
 
 </html>

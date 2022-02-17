@@ -62,7 +62,7 @@
 		}
 	}
 }
-.video-link {
+.video-link__btn {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -73,13 +73,25 @@
 		width: 90%;
 		margin: 0 auto;
 	}
-	&__logo {
-		&:before {
-			padding-right: rem(20);
-			font-size: rem(25);
+	transition: all .3s;
+	& span{
+		transition: color .3s;
+	}
+	@media (any-hover: hover){
+		&:hover span {
+			color: $textColor3;
+			transition: color .3s;
+		}
+		&:hover:before {
+			transform: rotate(120deg);
+			transition: all .3s;
 		}
 	}
-	&__btn {
+	&:before {
+		margin-right: rem(20);
+		font-size: rem(25);
+		transform-origin: center;
+		transition: all .3s;
 	}
 }
 
@@ -402,17 +414,9 @@
 	max-width: rem(860);
 	@include adaptiveValue("height", 80, 60);
 	margin: 0 auto;
-	& span {
-		display: inline-block;
-		width: rem(16);
-		height: rem(16);
-		background: url("@img/icons/icon-font/subscribe.svg") center no-repeat;
-		margin: rem(0) rem(10) rem(0) rem(0);
-		@media (max-width: $mobileSmall) {
-			margin: 0;
-		}
-	}
+
 	& p {
+		position: relative;
 		@media (max-width: $mobileSmall) {
 			display: none;
 		}
@@ -421,6 +425,17 @@
 	&__input {
 		height: 100%;
 		border-radius: 70px;
+	}
+
+	&__icon {
+		display: inline-block;
+		width: rem(16);
+		height: rem(16);
+		background: url("@img/icons/icon-font/subscribe.svg") center no-repeat;
+		margin: rem(0) rem(10) rem(0) rem(0);
+		@media (max-width: $mobileSmall) {
+			margin: 0;
+		}
 	}
 	// .form-subscribe__submit
 	&__submit {
