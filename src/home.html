@@ -6,76 +6,11 @@
 
 <body>
 	<div class="wrapper">
-		<div class="color-spots">
-			<div class="color-spots__item color-spots__item_top">
-				<div class="color-spots__wrapper color-spots__wrapper_top">
-					<div class="color-spots__spot color-spots__spot_top-navyBlue"></div>
-					<div class="color-spots__spot color-spots__spot_top-purple"></div>
-					<div class="color-spots__spot color-spots__spot_top-blue"></div>
-				</div>
-			</div>
-			<div class="color-spots__item color-spots__item_item2">
-				<div class="color-spots__wrapper">
-					<div class="color-spots__spot color-spots__spot_blue"></div>
-					<div class="color-spots__spot color-spots__spot_purple"></div>
-					<div class="color-spots__spot color-spots__spot_violet"></div>
-				</div>
-			</div>
-			<div class="color-spots__item color-spots__item_item3">
-				<div class="color-spots__wrapper">
-					<div class="color-spots__spot color-spots__spot_blue"></div>
-					<div class="color-spots__spot color-spots__spot_purple"></div>
-					<div class="color-spots__spot color-spots__spot_violet"></div>
-				</div>
-			</div>
-			<div class="color-spots__item color-spots__item_item4">
-				<div class="color-spots__wrapper">
-					<div class="color-spots__spot color-spots__spot_blue"></div>
-					<div class="color-spots__spot color-spots__spot_purple"></div>
-					<div class="color-spots__spot color-spots__spot_violet"></div>
-				</div>
-			</div>
-			<div class="color-spots__item color-spots__item_item5">
-				<div class="color-spots__wrapper">
-					<div class="color-spots__spot color-spots__spot_blue"></div>
-					<div class="color-spots__spot color-spots__spot_purple"></div>
-					<div class="color-spots__spot color-spots__spot_violet"></div>
-				</div>
-			</div>
-			<div class="color-spots__item color-spots__item_item6">
-				<div class="color-spots__wrapper">
-					<div class="color-spots__spot color-spots__spot_blue"></div>
-					<div class="color-spots__spot color-spots__spot_purple"></div>
-					<div class="color-spots__spot color-spots__spot_violet"></div>
-				</div>
-			</div>
-			<div class="color-spots__item color-spots__item_item7">
-				<div class="color-spots__wrapper">
-					<div class="color-spots__spot color-spots__spot_blue"></div>
-					<div class="color-spots__spot color-spots__spot_purple"></div>
-					<div class="color-spots__spot color-spots__spot_violet"></div>
-				</div>
-			</div>
-			<div class="color-spots__item color-spots__item_item8">
-				<div class="color-spots__wrapper">
-					<div class="color-spots__spot color-spots__spot_blue"></div>
-					<div class="color-spots__spot color-spots__spot_purple"></div>
-					<div class="color-spots__spot color-spots__spot_violet"></div>
-				</div>
-			</div>
-			<div class="color-spots__item color-spots__item_item9">
-				<div class="color-spots__wrapper">
-					<div class="color-spots__spot color-spots__spot_blue"></div>
-					<div class="color-spots__spot color-spots__spot_purple"></div>
-					<div class="color-spots__spot color-spots__spot_violet"></div>
-				</div>
-			</div>
-		</div>
 		@@include('html/_header.htm',{})
 		<main class="page">
 			<div class="page__container">
 				<div class="page__body">
-					<section class="main-section">
+					<section data-prlx-mouse-wrapper class="main-section">
 						<div class="main-section__offer main-offer">
 							<h1 class="main-offer__title _page-title">Virtual Reality Business Solutions</h1>
 							<p class="main-offer__subtitle _page-subtitle">We have over 15 year exprience in business
@@ -83,14 +18,15 @@
 							</p>
 							<div class="main-offer__buttons">
 								<div data-popup='#callback' class=" _popup-link _popup-link_offer">
-									<button type="button" class="_popup-link__btn _popup-link__btn_offer btn"><span>Join Us</span></button>
+									<button type="button" class="_popup-link__btn _popup-link__btn_offer btn"><span>Join
+											Us</span></button>
 								</div>
 								<button type="button" data-popup="#video" data-popup-youtube="5_bVkbG1ZCo"
 									class="video-link__btn _icon-main-play"><span>Watch video</span></button>
 							</div>
 						</div>
-						<div class="main-section__image">
-							<img src="@img/main-img.png" alt="">
+						<div  data-prlx-mouse class="main-section__image">
+							<img  src="@img/main-img.png" alt="">
 						</div>
 					</section>
 					<section id="service" class="service">
@@ -102,70 +38,70 @@
 						</div>
 						<div class="service__cards">
 							<div class="service__card  service-card service-card_order">
-								<div class="service-card__body">
+								<a class="service-card__body" href="#">
 									<img class="service-card__icon" src="@img/icons/content/service-order.png"
 										alt="service-order.png"></img>
 									<h3 class="service-card__title">Order Management</h3>
 									<p class="service-card__text">Lorem ipsum dolor sit amet, consectetur the adipiscing elit.
 										Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.</p>
-									<a class="service-card__link" href="#">Learn more<span class="_icon-arrow"></span></a>
-								</div>
+									<p  class="service-card__textlink">Learn more<span class="_icon-arrow"></span></p>
+								</a>
 							</div>
 							<div class="service__card service-card service-card_social ">
-								<div class="service-card__body">
+								<a class="service-card__body" href="#">
 									<img class="service-card__icon" src="@img/icons/content/service-bars.png"
 										alt="service-bars.png"></img>
 									<h3 class="service-card__title">Social Assistant</h3>
 									<p class="service-card__text">Lorem ipsum dolor sit amet, consectetur the adipiscing elit.
 										Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.</p>
-									<a class="service-card__link" href="#">Learn more<span class="_icon-arrow"></span></a>
-								</div>
+									<p class="service-card__textlink">Learn more<span class="_icon-arrow"></span></p>
+								</a>
 							</div>
 							<div class="service__card service-card service-card_crypto">
-								<div class="service-card__body">
+								<a class="service-card__body" href="#">
 									<img class="service-card__icon" src="@img/icons/content/service-bitcoin.png"
 										alt="service-bitcoin.png"></img>
 									<h3 class="service-card__title">Crypto Platform</h3>
 									<p class="service-card__text">Lorem ipsum dolor sit amet, consectetur the adipiscing elit.
 										Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.</p>
-									<a class="service-card__link" href="#">Learn more<span class="_icon-arrow"></span></a>
-								</div>
+									<p class="service-card__textlink">Learn more<span class="_icon-arrow"></span></p>
+								</a>
 							</div>
 							<div class="service__card service-card service-card_modules">
-								<div class="service-card__body">
+								<a class="service-card__body" href="#">
 									<img class="service-card__icon" src="@img/icons/content/service-engeneer.png"
 										alt="service-engeneer.png"></img>
 									<h3 class="service-card__title">Smart Trading Modules</h3>
 									<p class="service-card__text">Lorem ipsum dolor sit amet, consectetur the adipiscing elit.
 										Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.</p>
-									<a class="service-card__link" href="#">Learn more<span class="_icon-arrow"></span></a>
-								</div>
+									<p class="service-card__textlink">Learn more<span class="_icon-arrow"></span></p>
+								</a>
 							</div>
 							<div class="service__card service-card service-card_analyzer">
-								<div class="service-card__body">
+								<a class="service-card__body" href="#">
 									<img class="service-card__icon" src="@img/icons/content/service-graph.png"
 										alt="sservice-graph.png"></img>
 									<h3 class="service-card__title">Analyzer of the News</h3>
 									<p class="service-card__text">Lorem ipsum dolor sit amet, consectetur the adipiscing elit.
 										Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.</p>
-									<a class="service-card__link" href="#">Learn more<span class="_icon-arrow"></span></a>
-								</div>
+									<p class="service-card__textlink">Learn more<span class="_icon-arrow"></span></p>
+								</a>
 							</div>
 							<div class="service__card service-card service-card_price">
-								<div class="service-card__body">
+								<a class="service-card__body" href="#">
 									<img class="service-card__icon" src="@img/icons/content/service-analyses.png"
 										alt="service-analyses.png"></img>
 									<h3 class="service-card__title">Module of Price Notification</h3>
 									<p class="service-card__text">Lorem ipsum dolor sit amet, consectetur the adipiscing elit.
 										Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.</p>
-									<a class="service-card__link" href="#">Learn more<span class="_icon-arrow"></span></a>
-								</div>
+									<p class="service-card__textlink">Learn more<span class="_icon-arrow"></span></p>
+								</a>
 							</div>
 						</div>
 					</section>
 					<section class="articles">
-						<article class="articles__article article article_importance">
-							<div class="article__image">
+						<article data-prlx-mouse-wrapper class="articles__article article article_importance">
+							<div data-prlx-mouse class="article__image">
 								<img src="@img/complete-img.png" alt="complete-img.png">
 							</div>
 							<div class="article__offer article-offer">
@@ -180,8 +116,8 @@
 								<button type="button" class="article-offer__btn btn"><span>Read more</span></button>
 							</div>
 						</article>
-						<article class="articles__article article article_knowleges">
-							<div class="article__image">
+						<article data-prlx-mouse-wrapper class="articles__article article article_knowleges">
+							<div data-prlx-mouse class="article__image">
 								<img src="@img/customer-needs-img.png" alt="customer-needs-img.png">
 							</div>
 							<div class="article__offer article-offer">

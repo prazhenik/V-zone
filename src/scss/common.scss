@@ -5,118 +5,13 @@ section {
 	@include adaptiveValue("padding-bottom", 70, 30);
 }
 
-.btn{
-	background: linear-gradient(90.35deg, #2563eb 0.36%, #d946ef 201.02%);
-}
-
-.color-spots {
-	position: fixed;
-	top: 0;
-	left: 0;
-	min-height: 100%;
-	height: 100%;
-	width: 100%;
-	&:before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		display: inline-block;
-		height: 100%;
-		width: 100%;
-		backdrop-filter: blur(60px);
-		z-index: 1;
-	}
-	// .color-spots__item
-
-	&__item {
-		position: absolute;
-
-		// .color-spots__item_top
-		&_top {
-			top: 12%;
-		}
-		// .color-spots__item_item2
-		&_item2 {
-		}
-		// .color-spots__item_item3
-		&_item3 {
-		}
-		// .color-spots__item_item4
-		&_item4 {
-		}
-		// .color-spots__item_item5
-		&_item5 {
-		}
-		// .color-spots__item_item6
-		&_item6 {
-		}
-		// .color-spots__item_item7
-		&_item7 {
-		}
-		// .color-spots__item_item8
-		&_item8 {
-		}
-		// .color-spots__item_item9
-		&_item9 {
-		}
-	}
-	// .color-spots__wrapper
-	&__wrapper {
-		position: relative;
-		width: 100vw;
-
-
-		// .color-spots__wrapper_top
-		&_top {
-
-		}
-	}
-	// .color-spots__spot
-	&__spot {
-		position: absolute;
-		z-index: 0;
-		opacity: .2;
-		
-		//box-shadow: 0px 20px 15px 10px red, 0px -20px 15px -10px blue, inset 0px 20px 15px -10px red, inset 0px -20px 15px 10px blue;
-		// .color-spots__spot_top-navyBlue
-		&_top-navyBlue {
-			top: 200px;
-			left: 50px;
-			width: rem(1);
-			height: rem(1);
-			border-radius: 50%;
-			background-color: rgba(29, 78, 216, 0.45);
-			box-shadow: 0px 0px rem(100) rem(230) rgba(29, 78, 216, 0.45);
-		}
-		// .color-spots__spot_top-purple
-		&_top-purple {
-			top: 50px;
-			left: 57%;
-			width: rem(1);
-			height: rem(1);
-			border-radius: 50%;
-			background-color: rgba(217, 70, 239, 1);
-			box-shadow:  0px 0px rem(100) rem(80) rgba(217, 70, 239, 1);
-		}
-		// .color-spots__spot_top-blue
-		&_top-blue {
-			top: 200px;
-			@include adaptiveValue("right", 300, 50);
-			width: rem(1);
-			height: rem(1);
-			border-radius: 50%;
-			background-color: rgba(81, 65, 218, 1);
-			box-shadow:  0px 0px rem(150) rem(180) rgba(81, 65, 218, 1);
-		}
-		// .color-spots__spot_blue
-		&_blue {
-		}
-		// .color-spots__spot_purple
-		&_purple {
-		}
-		// .color-spots__spot_violet
-		&_violet {
+.site-logo img{
+	@media (any-hover: hover){
+		transition: all .2s;
+		&:hover {
+			transform: scale(1.2);
+			transition: all .2s;
 		}
 	}
 }
+

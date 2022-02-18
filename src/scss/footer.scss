@@ -87,7 +87,14 @@
 		padding: rem(20) rem(0) rem(0) rem(0);
 	}
 	&__item {
-
+		transition: all .2s ;
+		@media (any-hover: hover){
+			&:hover{
+				transform: translateY(-3px);
+				color: $textColor3;
+				transition: all .2s ;
+			}
+		}
 	}
 
 	&__link {
@@ -105,16 +112,8 @@
 			border: 1px solid $mainBorderColor;
 			border-radius: 50%;
 		}
-		transition: color .3s ;
-		@media (any-hover: hover){
-			&:hover{
-				color: $textColor3;
-				transition: color .3s ;
-			}
-		}
 	}
 }
-
 .footer-menues {
 	&__item {
 		min-width: rem(160);
@@ -201,6 +200,7 @@
 		display: flex;
 		@include adaptiveValue("gap", 50, 20, 768, 576, 1);
 		font-size: rem(14);
+
 	}
 }
 .policy-links {
@@ -208,5 +208,12 @@
 	}
 
 	&__link {
+		transition: color .3s;
+		@media (any-hover: hover){
+			&:hover{
+				color: $textColor4;
+				transition: color .3s;
+			}
+		}
 	}
 }

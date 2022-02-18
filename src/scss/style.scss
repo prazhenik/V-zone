@@ -23,18 +23,18 @@ $letterSpacing: 0.02;
 //===================================== ▼ ▼ ▼ ОСНОВНЫЕ ЦВЕТА ▼ ▼ ▼===============================================
 // цвета шрифтов
 $mainTextColor: rgba(255, 255, 255, 1); // Цвет шрифта по умолчанию
-$textColor2: rgba(255, 255, 255, .8); //footer
-$textColor3: rgb(240, 111, 245);//ссылки хедер меню
-// $textColor4: rgba(220, 220, 220, 0.6);
+$textColor2: rgba(255, 255, 255, 0.8); //footer ссылки
+$textColor3: rgb(240, 111, 245); //ссылки хедер меню
+$textColor4: rgb(111, 157, 255); // privacy footer hover
 // $textColor5: rgba(0, 160, 255, 1);
 //$textColor5: ;
 
 // цвета фонов
 $mainBackgroundColor: rgba(17, 24, 39, 1); //Цвет фона по умолчанию
-// $backgroundColor2: rgba(0, 0, 0, 0.7); // overlays _lock
-// $backgroundColor3: rgba(0, 0, 0, 0.3);
-// $backgroundColor4: rgba(220, 220, 220, 1);
-// $backgroundColor5: rgba(220, 220, 220, 0.3);
+$backgroundColor2: linear-gradient(90.35deg, rgba(37, 99, 235, 1) 0.36%, rgba(217, 70, 239, 1) 201.02%); // фон кнопок
+$backgroundColor3: rgba(240, 10, 248, 1); // фон кнопок ховер
+$backgroundColor4: linear-gradient(268.12deg, rgba(254, 254, 255, 0.08) -11.04%, rgba(236, 43, 253, 0.02) 104.89%); // фон карточек
+$backgroundColor5: linear-gradient(268.12deg, rgba(0, 0, 245, 0.2) -11.04%, rgba(255, 0, 221, 0.1) 104.89%); // фон карточек ховер
 // $backgroundColor6: rgba(0, 160, 255, 1);
 
 // цвета границ
@@ -168,7 +168,7 @@ body {
 	}
 	// Сайт загружен
 	// &.loaded.lock {
-		//padding-right: calc($scrollbarWidth - 0.5px) !important; // общая коррекция контента на скролл при модалке/меню
+	//padding-right: calc($scrollbarWidth - 0.5px) !important; // общая коррекция контента на скролл при модалке/меню
 	// 	& header,
 	// 	.__popup-link {
 	// 		padding-right: calc(

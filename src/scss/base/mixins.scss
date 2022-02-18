@@ -1,3 +1,5 @@
+//актуализирован 18/02/22 10.19
+
 //Подключение шрифта
 @mixin font($font_name, $file_name, $weight, $style) {
 	@font-face {
@@ -41,6 +43,13 @@
 
 // Адаптивное свойство (clamp)
 @mixin adaptiveValue($property, $startSize, $minSize, $widthFrom: $containerWidth, $widthTo: $minWidth, $keepSize: 0) {
+	@if ($startSize==0) {
+		$startSize: 0.000001;
+	}
+	@if ($minSize==0) {
+		$minSize: 0.000001;
+	}
+
 	// Для calc();
 	$addSize: math.div($startSize - $minSize, 16);
 
@@ -56,6 +65,9 @@
 	// Источник: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
 	$slope: math.div(($startSize - $minSize), ($widthFrom - $widthTo));
 	$yIntersection: -$widthTo * $slope + $minSize;
+	@if ($yIntersection==0) {
+		$yIntersection: 0.000001;
+	}
 	$flyValue: #{rem($yIntersection)}" + " #{$slope * 100}vw;
 
 	// Получение значения свойства
@@ -71,7 +83,10 @@
 	}
 	// Если не поддерживается clamp();
 	@supports not (#{$property}: $propertyValue) {
-		#{$property}: calc(#{rem($minSize)} + #{$addSize} * (100vw - #{rem($widthTo)}) / #{math.div($widthFrom, 16) - math.div($widthTo, 16)});
+		#{$property}: calc(
+			#{rem($minSize)} + #{$addSize} * (100vw - #{rem($widthTo)}) / #{math.div($widthFrom, 16) -
+				math.div($widthTo, 16)}
+		);
 	}
 
 	// Устанавливаем значения по умолчанию

@@ -147,14 +147,36 @@
 }
 
 .service-card {
-	background: linear-gradient(268.12deg, rgba(254, 254, 255, 0.032) -11.04%, rgba(255, 255, 255, 0.018) 104.89%);
-	/* Shadow */
-	box-shadow: 0px 22px 18px rgba(0, 0, 0, 0.05);
+	background: $backgroundColor4;
 	border: 1px solid $mainBorderColor;
 	border-radius: 34px;
+	@media (any-hover: hover){
+		transition: all .3s;
+		&:hover {
+			background: $backgroundColor5;
+			transform: scale(1.03);
+			transition: all .3s;
+		}
+	}
 	// .service-card__body
 	&__body {
+		display: block;
 		@include adaptiveValue("padding", 20, 10);
+		@media (any-hover: hover){
+			&:hover & {
+				transform: scale(1.1);
+				transition: all .3s;
+			}
+			&:hover .service-card__textlink{
+				color: $textColor3;
+				transition: all .3s;
+			}
+			&:hover ._icon-arrow{
+				color: $mainTextColor;
+				transform: translateX(rem(5));
+				transition: all .3s;
+			}
+		}
 	}
 	// .service-card__icon
 	&__icon {
@@ -179,13 +201,15 @@
 			margin: rem(0) rem(0) rem(15) rem(0);
 		}
 	}
-	// .service-card__link
-	&__link {
+	// .service-card__textlink
+	&__textlink {
 		display: inline-flex;
 		font-size: rem(16);
 		padding: rem(10);
+		transition: color .3s;
 		& span {
 			margin: rem(1) rem(0) rem(0) rem(5);
+			transition: all .3s;
 		}
 	}
 }
@@ -270,6 +294,7 @@
 	text-align: center;
 	// .team__body
 	&__body {
+		
 	}
 	&__header {
 		max-width: rem(600);
@@ -296,15 +321,32 @@
 	}
 	// .team__card
 	&__card {
+		
 	}
 }
 
 .team-card {
-	background: linear-gradient(268.12deg, rgba(254, 254, 255, 0.032) -11.04%, rgba(255, 255, 255, 0.018) 104.89%);
-	/* Shadow */
-	box-shadow: 0px 22px 18px rgba(0, 0, 0, 0.05);
+	background: $backgroundColor4;
 	border: 1px solid $mainBorderColor;
 	border-radius: 34px;
+	@media (any-hover: hover){
+		transition: transform .3s;
+		&:hover {
+			background: $backgroundColor5;
+			transform: scale(1.03);
+			transition: transform .2s;
+		}
+		&:hover .socials-card {
+			transform: scale(1.4);
+			transition: transform .2s;
+		}
+
+		&:hover .team-card__img img{
+			filter: grayscale(0);	
+			transition: filter .5s;
+		}
+
+	}
 	// .team-card__body
 	&__body {
 		display: inline-flex;
@@ -328,6 +370,8 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+			filter: grayscale(1);
+			transition: filter .5s;
 		}
 		&:not(:last-child) {
 			margin: rem(0) rem(0) rem(10) rem(0);
@@ -358,6 +402,7 @@
 }
 .socials-card {
 	width: rem(110);
+	transition: all .3s;
 	// .socials-card__list
 	&__list {
 		display: flex;
@@ -369,6 +414,13 @@
 	&__item {
 		width: rem(18);
 		height: rem(18);
+		transition: all .3s;
+		@media (any-hover: hover){
+			&:hover {
+				transform: translateY(-3px);
+				transition: all .3s;
+			}
+		}
 	}
 	// .socials-card__link
 	&__link {
@@ -382,9 +434,7 @@
 .subscribe {
 	&__body {
 		text-align: center;
-		background: linear-gradient(268.12deg, rgba(254, 254, 255, 0.032) -11.04%, rgba(255, 255, 255, 0.018) 104.89%);
-		/* Shadow */
-		box-shadow: 0px 22px 18px rgba(0, 0, 0, 0.05);
+		background: $backgroundColor4;
 		border: 1px solid $mainBorderColor;
 		border-radius: 34px;
 		@include adaptiveValue("padding", 50, 25);

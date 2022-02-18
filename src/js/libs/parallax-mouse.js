@@ -60,7 +60,7 @@ class MousePRLX {
 			// Напр. У
 			const directionY = el.hasAttribute('data-prlx-dyr') ? -1 : 1;
 			// Скорость анимации
-			const paramAnimation = el.dataset.prlxA ? +el.dataset.prlxA : 50;
+			const paramAnimation = el.dataset.prlxA ? +el.dataset.prlxA : 30;
 
 
 			// Объявление переменных
